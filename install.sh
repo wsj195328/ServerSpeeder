@@ -1,7 +1,7 @@
 #!/bin/bash
 
 script_update=2020.05.09
-script_version=1.1.1
+script_version=1.1.2
 
 usage_guide() {
 bash <(wget --no-check-certificate -qO- https://github.com/Aniverse/Aniverse/raw/master/install.sh) install
@@ -46,7 +46,7 @@ fi
 
 function Check()
 {
-echo 'Preparatory work ... $script_version'
+echo -e "Preparatory work ... $script_version"
 apt-get >/dev/null 2>&1
 [ $? -le '1' ] && apt-get -y -qq install grep unzip ethtool >/dev/null 2>&1
 yum >/dev/null 2>&1
